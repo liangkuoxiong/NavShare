@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NavShareModelStoreContainer" CdmEntityContainer="NavShareEntities">
+    <EntitySetMapping Name="Nav">
+      <EntityTypeMapping TypeName="NavShareModel.Nav">
+        <MappingFragment StoreEntitySet="Nav">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="NavFrom" ColumnName="NavFrom" />
+          <ScalarProperty Name="NavOpenId" ColumnName="NavOpenId" />
+          <ScalarProperty Name="ShareOpenId" ColumnName="ShareOpenId" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Share">
+      <EntityTypeMapping TypeName="NavShareModel.Share">
+        <MappingFragment StoreEntitySet="Share">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ShareTo" ColumnName="ShareTo" />
+          <ScalarProperty Name="ShareOpenId" ColumnName="ShareOpenId" />
+          <ScalarProperty Name="ParentShareOpenId" ColumnName="ParentShareOpenId" />
+          <ScalarProperty Name="ShareTime" ColumnName="ShareTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

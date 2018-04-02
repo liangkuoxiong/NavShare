@@ -38,9 +38,9 @@ namespace NavShare
             link += "?s=" + ViewState["u"];
             RegJssdk.ShareEnitiy shareentity = new RegJssdk.ShareEnitiy()
             {
-                imgUrl = "【上传图片的地址】",
-                Title = "【分享标题】",
-                Desc = "【分享提示信息】",
+                imgUrl = "https://github.com/liangkuoxiong/NavShare/blob/master/NavShare/img/abc.png?raw=true",
+                Title = "abc",
+                Desc = "abc",
                 Link = link 
             };
             string jscode = RegJssdk.RegisterJssdk(Wx.appId, Wx.accessToken, url, shareentity);

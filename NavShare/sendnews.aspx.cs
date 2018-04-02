@@ -20,7 +20,7 @@ namespace NavShare
                 List<NewsModel> News = new List<NewsModel>();
                 int count;
                 int.TryParse(Request.Form["lineCount"], out count);
-                string Author = "【个人信息】";
+                string Author = "计算机应用技术2班20150301241梁阔雄";
                 string AuthorID = Request.Form["AuthorID"];
                 for (int i = 0; i < count; ++i)
                 {

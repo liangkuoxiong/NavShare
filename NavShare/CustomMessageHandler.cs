@@ -62,7 +62,7 @@ namespace Sample_3
             {
                 responseMessage.Articles.Add(new Article()
                 {
-                    PicUrl = "【上传图片的地址】",
+                    PicUrl = "https://github.com/liangkuoxiong/NavShare/blob/master/NavShare/img/abc.png?raw=true",
                     Description = "点击图文中的链接，可打开ViewNav.aspx",
                     Url = "http://"+HttpContext.Current.Request.Url.Host+"/ViewNav.aspx",
                     Title = "ViewNav"
@@ -72,7 +72,7 @@ namespace Sample_3
             {
                 responseMessage.Articles.Add(new Article()
                 {
-                    PicUrl = "【上传图片的地址】",
+                    PicUrl = "https://github.com/liangkuoxiong/NavShare/blob/master/NavShare/img/def.jpg?raw=true",
                     Description = "点击图文中的链接，可打开ViewsShare.aspx",
                     Url = "http://" + HttpContext.Current.Request.Url.Host + "/ViewShare.aspx?s=system",
                     Title = "ViewsShare"
@@ -82,7 +82,7 @@ namespace Sample_3
             {
                 responseMessage.Articles.Add(new Article()
                 {
-                    PicUrl = "【上传图片的地址】",
+                    PicUrl = "https://github.com/liangkuoxiong/NavShare/blob/master/NavShare/img/ghi.png?raw=true",
                     Description = "点击图文中的链接，可打开NavShareIndex.aspx",
                     Url = "http://"+HttpContext.Current.Request.Url.Host+"/NavShareIndex.aspx?s=system",
                     Title = "随便"
@@ -94,7 +94,7 @@ namespace Sample_3
         protected override IResponseMessageBase OnEvent_SubscribeRequest(RequestMessageEvent_Subscribe requestMessage)
         {
             var responseMessage = CreateResponseMessage<ResponseMessageText>();
-            responseMessage.Content = @"【订阅事件，把自己的信息打上去】";
+            responseMessage.Content = @"欢迎关注!【班级：计算机应用技术二班】\n【姓名：梁阔雄】\n【学号：20150301241】\n【性别：男】";
             return responseMessage;
         }
         //没有被处理消息
@@ -113,7 +113,7 @@ namespace Sample_3
                     {
                         var msg = CreateResponseMessage<ResponseMessageNews>();
                         var r = User.Info(Wx.accessToken, requestMessage.FromUserName);
-                        msg.Articles.Add(new Article { Description = string.Format("{0},您好！【把自己的信息打上去】", r.nickname) });
+                        msg.Articles.Add(new Article { Description = string.Format("{0},您好！欢迎关注!【班级：计算机应用技术二班】\n【姓名：梁阔雄】\n【学号：20150301241】\n【性别：男】", r.nickname) });
                         msg.Articles.Add(new Article
                             {
                                 Title = string.Format("你的微信号是{0}", r.openid),

@@ -11,9 +11,9 @@
     <form id="form1" runat="server" enctype="multipart/form-data">
     <div>    
         <h1>作者信息</h1>
-        <p>班级;计算机应用技术 班
-            学号：
-            姓名：
+        <p>班级;计算机应用技术2班
+            学号：20150301241
+            姓名：梁阔雄
         </p>
     </div>
     <div>
